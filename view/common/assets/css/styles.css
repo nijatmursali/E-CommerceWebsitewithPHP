@@ -1,0 +1,13 @@
+.navbar.navbar-light.navbar-expand-md.bg-light {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+img {
+  background-image: url("../../assets/img/spider-man-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ffffff;
+}
+
