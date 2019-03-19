@@ -18,16 +18,17 @@
 
 
 
-<button type="button" id="buttongirish"class="btn btn-success pull-right" data-toggle="modal" data-target=".bs-example1-modal-lg">
+<button type="button" id="buttongirish" style = "background: rgba(59,173,227,1);
+    								background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" class="btn btn-success pull-right" data-toggle="modal" data-target=".bs-example1-modal-lg">
 	Giriş
 </button>
 <div class="modal fade bs-example1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 	<div class="modal-dialog modal-lg">
 		<div style="background-image: url('productimages/hero.jpg');background-position = center; background-repeat: no-repeat; background-size:cover;" class="modal-content">
 			<div class="container">
-				<div id="loginbox" style="margin-top:10px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<div id="loginbox" style="margin-top:10px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" style = "">
 					<div class="panel panel-info" >
-						<div class="panel-heading">
+						<div class="panel-heading" style = "">
 							<div class="panel-title">
 								Sistemə daxil ol.
 							</div>
@@ -55,7 +56,8 @@
 							<div style="margin-top:10px" class="form-group">
 								<!-- Button -->
 								<div class="col-md-offset-3 col-md-9">
-									<input name="signin"  class="btn btn-info" value="Sistemə daxil ol" type="submit" />
+									<input name="signin"  class="btn btn-info" value="Sistemə daxil ol" style="background: rgba(59,173,227,1);
+    								background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" type="submit" />
 
 								</div>
 							</div>

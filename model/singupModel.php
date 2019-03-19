@@ -67,8 +67,26 @@ class singupModel {
 	}
 
 	public function userpanel() {
-		session_start();
-		session_destroy();
+		//if(isset($_GET['username'])) {
+        //$username = $_GET['username'];
+
+        $ccn = mysqli_connect("localhost","root","")or die("connecton error");
+		mysqli_select_db($ccn,'barter');
+        
+        $userquery = mysqli_query($ccn,"SELECT * FROM details WHERE Email='javid'") or die("");
+        if(mysqli_num_rows($userquery) !=1) {
+            die("");
+        }
+        while($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            $firstname = $row['FirstName'];
+            $lastname = $row['LastName'];
+            $email = $row['Email'];
+            $mobile = $row['Mob'];
+            $pass = $row['password'];
+
+        }
+    //}
+
 	}
 
 }
