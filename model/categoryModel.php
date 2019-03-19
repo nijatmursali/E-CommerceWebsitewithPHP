@@ -13,7 +13,7 @@ class categoryModel {
 	public function openDB() {
 		$this -> conn = new mysqli($this -> conset -> servername, $this -> conset -> username, $this -> conset -> password, $this -> conset -> dbname);
 		if ($this -> conn -> connect_error) {
-			die("Connection failed: " . $this -> conn -> connect_error);
+			die("Databazada problem yarandı. " . $this -> conn -> connect_error);
 		}
 	}
 

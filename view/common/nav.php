@@ -221,7 +221,10 @@ if (isset( $_SESSION['user'])) {
 				?>
 				<li class="pull-right">
 					<form method="post" action="user.php">
-						<input name="logout"  class="btn btn-info" value="Logout" type="submit" />
+						<input name="userpanel"  class="btn btn-info" style="background: rgba(59,173,227,1);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" value="User paneli" type="submit" />
+						<input name="logout"  class="btn btn-info" style = "background: rgba(59,173,227,1);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" value="Logout" type="submit" />
 					</form>
 				</li>
 				<?php } ?> <li class="pull-right"></li>

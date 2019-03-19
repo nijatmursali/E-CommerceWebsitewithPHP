@@ -32,29 +32,29 @@ class sliderModel {
 		if (isset($_POST["submit"])) {
 			$check = getimagesize($_FILES["file"]["tmp_name"]);
 			if ($check !== false) {
-				echo "<script type='text/javascript'>alert('File is an image - " . $check["mime"] . ".')</script>";
+				echo "<script type='text/javascript'>alert('Fayl şəkildir - " . $check["mime"] . ".')</script>";
 				$uploadOk = 1;
 			} else {
-				echo "<script type='text/javascript'>alert('File is not an image.')</script>";
+				echo "<script type='text/javascript'>alert('Fayl şəkil deyil.')</script>";
 				$uploadOk = 0;
 			}
 		}
 
 		// Check file size
 		if ($_FILES["file"]["size"] > 500000) {
-			echo "<script type='text/javascript'>alert('Sorry, your file is too large.')</script>";
+			echo "<script type='text/javascript'>alert('Daha kiçik şəkil seçin.')</script>";
 			$uploadOk = 0;
 		}
 			// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-			echo "<script type='text/javascript'>alert('Sorry, your file was not uploaded.')</script>";
+			echo "<script type='text/javascript'>alert('Şəkil yüklənmədi.')</script>";
 			// if everything is ok, try to upload file
 		} else {
 			if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-				echo "<script type='text/javascript'>alert('The file " . basename($_FILES["file"]["name"]) . " has been uploaded.')</script>";
+				echo "<script type='text/javascript'>alert('Fayl " . basename($_FILES["file"]["name"]) . " yükləndi.')</script>";
 				return $target_file;
 			} else {
-				echo "<script type='text/javascript'>alert('Sorry, there was an error uploading your file.')</script>";
+				echo "<script type='text/javascript'>alert('Şəkil yüklənərkən problem yaşandı.')</script>";
 			}
 		}
 
@@ -68,7 +68,7 @@ class sliderModel {
 		if ($stmt -> execute()) {
 			echo "Elan müvəffəqiyyətlə yükləndi!";
 		} else {
-			echo "<script type='text/javascript'>alert('uploaded unsuccesfully')</script>";
+			echo "<script type='text/javascript'>alert('Yükləndi.')</script>";
 		}
 
 		$res = $stmt -> get_result();
