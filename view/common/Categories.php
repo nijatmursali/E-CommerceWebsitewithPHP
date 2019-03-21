@@ -1,3 +1,24 @@
+<?php 
+    $db['db_host'] = "localhost";
+    $db['db_user'] = "root";
+    $db['db_pass'] = "";
+    $db['db_name'] = "barter";
+
+    foreach($db as $key => $value) {
+        define(strtoupper($key), $value);
+    }
+
+    $ccn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+    if($ccn) {
+        //echo "We are connected";
+    }
+
+
+?> 
+
+
+
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 <style>
 
@@ -257,6 +278,21 @@
               <div id = "mega-menu">
 
                 <ul class="list-unstyled">
+
+                    <?php 
+    
+                    $query = "SELECT * FROM menu";
+                    $select_all_cat_query = mysqli_query($ccn, $query);
+                    
+                    while($row = mysqli_fetch_assoc($select_all_cat_query)) {
+                        $cat_title = $row['label'];
+
+                        //echo "<li class = 'menu-item menu-1'><a href='#'>{$cat_title}</a></li>";
+                    }
+
+                    ?>
+
+
                     <li class="menu-item menu-1"><a href="products.php?op=list&cat=1" class='list-group-item'>Elektronika <span class="sub-arrow"></span>
                         </a>
                         <div class="mega-submenu">

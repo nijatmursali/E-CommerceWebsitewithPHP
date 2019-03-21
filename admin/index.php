@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link href="../view/css/bootstrap.min.css" rel="stylesheet">
-<script src="../view/js/jquery.min.js"></script>
-<script src="../view/js/bootstrap.min.js"></script>
+
+
+<?php include "includes/header.php" ?>
+
+
+
 <style>
 	table, th, td {
 
@@ -13,9 +13,45 @@
 		padding: 5px;
 	}
 		</style>
-</head>
 
-<body>
+<div id="wrapper">
+	<?php include "includes/navigations.php" ?>
+		
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Admin panelə xoş gəlmisiz!
+                            <small>Xulio</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i> Blank Page
+														</li>
+														
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+
+
+
 <div align="center">
   <a href="index.php"><h1 class="style2" style="font-family:Georgia, 'Times New Roman', Times, serif">Admin paneli</h1></a>
   <p>&nbsp;</p>
@@ -72,6 +108,7 @@ if (isset($_POST['dltpr'])) {
 	<th>ID</th>
 	<th>Məhsulun adı</th>
 	<th>Qiyməti</th>
+	<th>Link</th>
 	</tr>';
 
 	while ($row = $result -> fetch_assoc()) {
@@ -125,7 +162,7 @@ else {
 	//--------------------------product---------------------------
 
 	echo '<div style="width:49%; float:left;"><h2>Product Table</h2>';
-	$sql = "SELECT pid,title,price FROM addproducts ORDER BY pid";
+	$sql = "SELECT pid,title,price, image FROM addproducts ORDER BY pid";
 	$result = $conn -> query($sql);
 
 	if ($result -> num_rows > 0) {
@@ -135,16 +172,18 @@ else {
 	<th>ID</th>
 	<th>Məhsulun adı</th>
 	<th>Qiyməti</th>
-
+	<th>Şəkil</th>
+	<th>Link</th>
 	</tr>';
 
 	while ($row = $result -> fetch_assoc()) {
 	echo "
-	<tr>
-		<td>" . $row["pid"] . "</td><td>" . $row["title"] . "</td><td>" . $row["price"] . "</td>
+	<tr> 
+		<td>" . $row["pid"] . "</td><td>" . $row["title"] . "</td><td>" . $row["price"] . 
+			"AZN</td> <td><img src='http://localhost/bartero/".$row["image"]."' height=100px width=100px></td><td><a href='http://localhost/bartero/products.php?op=pdesc&pid=".$row["pid"]."'>"  .$row["title"] . "</a></td>
 	</tr>";
 	}
-
+	
 	echo "</table></div>";
 	} else {
 	echo "0 results";
@@ -179,5 +218,6 @@ else {
 	}
 ?>
 </div>
-</body>
-</html>
+
+
+<?php include "includes/footer.php" ?>

@@ -1,3 +1,9 @@
+<?php
+
+require('user.php');
+
+?>
+
 <?php 
 
     //if(isset($_GET['username'])) {
@@ -69,10 +75,7 @@
                       </div>
                       <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
                           <div class="container" >
-                            <h2><?php echo $firstname;?> <?php echo $lastname;?></h2>
-                            <p>an   <b> Employee</b></p>
-                          
-                           
+                            <h2><?php echo $firstname;?> <?php echo $lastname;?></h2>           
                           </div>
                            <hr>
                           <ul class="container details" >
@@ -80,7 +83,7 @@
                             <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span><?php echo $email;?></p></li>
                           </ul>
                           <hr>
-                          <div class="col-sm-5 col-xs-6 tital " >Date Of Joining: 15 Jun 2016</div>
+                          <div class="col-sm-5 col-xs-6 tital " >Daxil olma tarixi: 15 Jun 2016</div>
                       </div>
                 </div>
             </div>

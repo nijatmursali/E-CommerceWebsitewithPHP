@@ -4,7 +4,7 @@
     <?php
     require 'view/common/head.php';
 		require 'view/common/nav.php';
-    require_once 'config.php';
+    require('user.php');
 		?>
 </head>
 <style media="screen">

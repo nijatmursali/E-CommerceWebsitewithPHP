@@ -1,6 +1,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
 <style media="screen">
 
 	html, body {
@@ -222,7 +226,7 @@ if (isset( $_SESSION['user'])) {
 				<li class="pull-right">
 					<form method="post" action="user.php">
 						<input name="logout"  class="btn btn-info" style = "background: rgba(59,173,227,1);
-    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" value="Logout" type="submit" />
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);" value="Çıxış" type="submit" />
 					</form>
 				</li>
 				<li class="pull-right">

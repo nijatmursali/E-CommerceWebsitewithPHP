@@ -25,6 +25,26 @@ class singupModel {
 		$ccn = mysqli_connect("localhost","root","")or die("connecton error");
 		mysqli_select_db($ccn,'barter');
 
+		$email = mysqli_real_escape_string($ccn, $email);
+		$pass = mysqli_real_escape_string($ccn, $pass);
+
+		$fname = mysqli_real_escape_string($ccn, $fname);
+
+
+		$hashFormat = "$2y$10$";
+
+		$salt = "iusesomecrazystrings22";
+
+		$hashF_and_salt =  $hashFormat . $salt;
+
+		$pass = crypt($pass, $hashF_and_salt);
+
+
+		$expiration = time() + (60*60*24*7);
+
+		setcookie($email, $pass, $expiration);
+
+
 		$sql = "select * from details where Email= '$email'";
 
 		$rs = mysqli_query($ccn, $sql);

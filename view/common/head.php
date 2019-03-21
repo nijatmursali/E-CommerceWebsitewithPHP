@@ -18,7 +18,18 @@
 <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
 <link rel="stylesheet" href="assets/css/styles.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <link id="callCss" rel="stylesheet" href="themes/bootshop/bootstrap.min.css" media="screen"/>
+    <link href="view/themes/css/base.css" rel="stylesheet" media="screen"/>
+<!-- Bootstrap style responsive -->	
+	<link href="view/themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+	<link href="view/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
+<!-- Google-code-prettify -->	
+	<link href="view/themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+<!-- fav and touch icons -->
+	<style type="text/css" id="enject"></style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

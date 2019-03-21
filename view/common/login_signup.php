@@ -110,7 +110,7 @@
 							<div class="form-group">
 								<label for="number" class="col-md-3 control-label">Əlaqə nömrəniz:</label>
 								<div class="col-md-9">
-									<input type="text" required class="form-control" maxlength="10" name="number" placeholder="Əlaqə nömrəniz" onkeypress="return isNaN">
+									<input type="text" required class="form-control" maxlength="13" name="number" placeholder="Əlaqə nömrəniz" onkeypress="return isNaN">
 								</div>
 							</div>
 							<div class="form-group">
