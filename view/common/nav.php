@@ -104,7 +104,7 @@ nav ul li a{
 .header-social {
 	background-color: #151515;
 	width: 100%;
-	height: 100%;
+	
 	padding-right: 8px;
 }
 

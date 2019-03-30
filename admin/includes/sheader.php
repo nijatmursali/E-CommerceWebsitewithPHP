@@ -1,3 +1,23 @@
+<?php 
+    include "../db.php"
+?>
+<?php 
+    session_start();
+?>
+
+
+<?php 
+
+if(isset($_SESSION['role'])) {
+    if($_SESSION['role'] !== 'admin') {
+        header("Location: loginForm.php");
+        session_destroy();
+    } 
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +29,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Nedeten</title>
 
     <link href="../view/css/bootstrap.min.css" rel="stylesheet">
     <script src="../view/js/jquery.min.js"></script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
 	<head>
 	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
 		<?php
@@ -11,7 +12,9 @@
 				.carousel.slide {
 					margin-top: 0px;
 				}
-
+				.thumbnail p {
+					text-align: left;
+				}
 
 
 		</style>

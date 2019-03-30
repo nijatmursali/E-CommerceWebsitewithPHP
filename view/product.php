@@ -3,6 +3,7 @@ require_once 'config.php';
 ?>
 
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html>
 	<head>
 	
@@ -108,21 +109,25 @@ require_once 'config.php';
 <div class = "information">
 			<p>
 			<?php echo $product -> descri; ?>
-			<a class="btn btn-small pull-right" href="#detail">Əlavə məlumat</a>
+			
 			</p>
+			<a class="btn btn-small pull-right" href="#detail">Əlavə məlumat</a>
 			</div>
 			
 			<br class="clr"/>
 		<a href="#" name="detail"></a>
-		<hr class="soft"/>
+		
 		
 		</div>
-
-		<div class="span9">
+		<div class="clear"></div>
+		<div class="container">
+		<div class="span9 pull-right">
 					<ul id="productDetail" class="nav nav-tabs">
 						<li class="active"><a href="#home" data-toggle="tab">Məhsul haqqında</a></li>
 						<li><a href="#profile" data-toggle="tab">Oxşar elanlar</a></li>
 					</ul>
+		</div>
+		</div>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="home">
 			<h4>Məhsul haqqında məlumat</h4>
@@ -143,8 +148,8 @@ require_once 'config.php';
 			</tbody>
 			</table>
 
-			<h5>Məlumatlar</h5>
-			<p>
+			<h4 style="margin-left: 5px;">Məlumatlar</h4>
+			<p style="margin-left: 5px; margin-right=50px;">
 			<?php echo $product -> descri; ?>
 			</p>
 

@@ -7,21 +7,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Xulionun admin paneli</a>
+                <a class="navbar-brand" href="loggedIn.php">Xulionun admin paneli</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['FirstName'];?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+                            <a href="includes/profile.php"><i class="fa fa-fw fa-user"></i> Profil</a>
+                            
                         </li>
 
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Çıxış etmək</a>
+                            
+                            <a href="includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Çıxış etmək</a>
+                            
                         </li>
                     </ul>
                 </li>
@@ -34,13 +37,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="loggedIn.php"><i class="fa fa-fw fa-dashboard"></i> Ana səhifə</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i> Elanlar <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts" class="collapse">
                             <li>
-                                <a href="#">Bütün elanları göstər</a>
+                                <a href="elanlar.php">Bütün elanları göstər</a>
                             </li>
                             <li>
                                 <a href="#">Elan əlavə et</a>
@@ -48,16 +51,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Kateqoriyalar</a>
+                        <a href="categories.php"><i class="fa fa-fw fa-wrench"></i> Kateqoriyalar</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> İstifadəçilər <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="users.php">İstifadəçilərə baxın</a>
                             </li>
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="#">İstifadəçi əlavə edin</a>
                             </li>
                         </ul>
                     </li>
@@ -65,7 +68,7 @@
                         <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Kommentlər</a>
                     </li>
                     <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Admin profili</a>
+                        <a href="includes/profile.php"><i class="fa fa-fw fa-dashboard"></i> Admin profili</a>
                     </li>
                 </ul>
             </div>

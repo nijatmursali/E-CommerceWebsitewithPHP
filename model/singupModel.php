@@ -20,29 +20,35 @@ class singupModel {
 		$this -> conn -> close();
 	}
 
-	public function singup($email, $fname, $lname, $mno, $pass) {
+	
+	
+
+	public function singup($email, $fname, $lname, $mno, $password) {
 
 		$ccn = mysqli_connect("localhost","root","")or die("connecton error");
 		mysqli_select_db($ccn,'barter');
 
 		$email = mysqli_real_escape_string($ccn, $email);
-		$pass = mysqli_real_escape_string($ccn, $pass);
+		$password = mysqli_real_escape_string($ccn, $password);
 
 		$fname = mysqli_real_escape_string($ccn, $fname);
 
+		$query = "SELECT randSalt from details";
 
-		$hashFormat = "$2y$10$";
+		$select_rand_salt_query = mysqli_query($ccn, $query);
+		$row = mysqli_fetch_array($select_rand_salt_query);
 
-		$salt = "iusesomecrazystrings22";
+		$salt = $row['randSalt'];
+		
 
-		$hashF_and_salt =  $hashFormat . $salt;
+		$password = crypt($password, $salt);
 
-		$pass = crypt($pass, $hashF_and_salt);
+		$message = "";
 
 
 		$expiration = time() + (60*60*24*7);
 
-		setcookie($email, $pass, $expiration);
+		setcookie($email, $password, $expiration);
 
 
 		$sql = "select * from details where Email= '$email'";
@@ -52,7 +58,7 @@ class singupModel {
 		$sig = mysqli_num_rows($rs);
 
 		if($sig==0){
-			$sqll = " insert into details(Email, FirstName, LastName, Mob, password) values ('$email','$fname','$lname','$mno','$pass')";
+			$sqll = " insert into details(Email, FirstName, LastName, Mob, password) values ('$email','$fname','$lname','$mno','$password')";
 
 			mysqli_query($ccn,$sqll);
 			echo "<script type='text/javascript'>alert('Qeydiyyatdan keçdiniz.')</script>";
@@ -61,14 +67,16 @@ class singupModel {
 			echo "<script type='text/javascript'>alert('User artıq var.')</script>";
 
 		}
+		return($password);
 
 	}
 
 
 	public function login($email, $pass) {
 		$this -> openDB();
+		
 		$stmt = $this -> conn -> prepare("SELECT * FROM details WHERE Email=? AND password=?");
-
+		
 		$stmt -> bind_param("ss", $email, $pass);
 		if ($stmt -> execute()) {
 			$res = $stmt -> get_result();
@@ -89,7 +97,7 @@ class singupModel {
 	public function userpanel() {
 		//if(isset($_GET['username'])) {
         //$username = $_GET['username'];
-
+		
         $ccn = mysqli_connect("localhost","root","")or die("connecton error");
 		mysqli_select_db($ccn,'barter');
         
